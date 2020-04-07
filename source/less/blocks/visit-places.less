@@ -1,0 +1,187 @@
+.visit-places__title {
+  width: 360px;
+  .clear();
+  margin-bottom: 32px;
+  padding-bottom: 34px;
+  margin-left: 19.53%;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.245px;
+  color: @text;
+  background-image: url('../img/places-divider.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.visit-places__description {
+  width: 330px;
+  .clear();
+  margin-bottom: 54px;
+  margin-left: 19.53%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.466667px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.visit-places__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .clear();
+  margin-bottom: -4px;
+  margin-left: 17.53%;
+  margin-right: 17.53%;
+  list-style: none;
+}
+
+.visit-places__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5.26%;
+  position: relative;
+
+  &:hover>.visit-places__item-ground,
+  &:focus>.visit-places__item-ground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 21, 23, 0.6);
+  }
+
+  &:hover>.visit-places__link,
+  &:focus>.visit-places__link {
+    display: block;
+  }
+}
+
+.visit-places__link {
+  display: none;
+  position: absolute;
+  padding: 25px 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.visit-places__image {
+  display: block;
+  .size(350; 430);
+}
+
+.visit-places__name {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  .clear();
+  padding: 17px 30px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.415px;
+  color: @text;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+@media (max-width: @tablet-width) {
+  .visit-places {
+    .clear();
+  }
+
+  .visit-places__title {
+    width: auto;
+    .clear();
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    background-image: none;
+  }
+
+  .visit-places__description {
+    width: 345px;
+    .clear();
+    margin: 0 auto 40px;
+    text-align: center;
+    letter-spacing: -0.466667px;
+  }
+
+  .visit-places__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .clear();
+    margin-bottom: 68px;
+    margin-left: 6.547%;
+    margin-right: 6.547%;
+    list-style: none;
+  }
+
+  .visit-places__item {
+    margin-bottom: 30px;
+  }
+
+  .visit-places__image {
+    .size(288; 425);
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .visit-places__title {
+    width: 360px;
+    .clear();
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .visit-places__title {
+    width: 100%;
+  }
+
+  .visit-places__description {
+    width: 100%;
+    .clear();
+    margin-bottom: 20px;
+  }
+
+  .visit-places__list {
+    width: 288px;
+    flex-direction: column;
+    justify-content: flex-start;
+    .clear();
+    margin: 0 auto 88px;
+  }
+
+  .visit-places__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 69px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .visit-places__image {
+    .size(288; 425);
+  }
+}

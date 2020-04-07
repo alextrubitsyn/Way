@@ -1,0 +1,61 @@
+.communication {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 455px;
+  margin: 0 auto 170px;
+  padding: 0 18.9% 0 20.156%;
+  color: @text-dark;
+  background-image: url("../img/communication-background.png");
+  background-repeat: no-repeat;
+  background-size: 844px 455px;
+  background-position: 36.156% 0;
+
+}
+
+.communication__question {
+  .clear();
+  margin-bottom: 11px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.communication__proposal {
+  .clear();
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: @tablet-width) {
+  .communication {
+    justify-content: center;
+    .clear();
+    margin: 0 auto 80px;
+    color: @text-dark;
+    background-size: 100% 455px;
+    background-position: center;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .communication {
+    justify-content: center;
+    align-items: flex-start;
+    .clear();
+    margin: 0 auto 70px;
+    background-image: none;
+  }
+
+.communication__question {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.communication__proposal {
+  margin-bottom: 20px;
+  text-align: center;
+}
+}

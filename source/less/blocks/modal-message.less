@@ -1,0 +1,45 @@
+.modal-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+  display: none;
+  width: 38%;
+  min-height: 444px;
+  padding-top: 179px;
+  text-align: center;
+  background-color: #FBF8F8;
+  transform: translate(-50%, -50%);
+
+  &--open {
+    display: block;
+    animation: modal 0.4s;
+  }
+}
+
+.modal-message__title {
+  width: 55%;
+  .clear();
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: #48494D;
+}
+
+.modal-message__btn-close {
+  position: absolute;
+  display: block;
+  .size(22);
+  top: 20px;
+  right: 20px;
+  background: url("../img/icon-close.svg") no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Way</title>
+    <link href="css/style.min.css" rel="stylesheet" />
+    <!-- <link href="css/style.css" rel="stylesheet" />
+  <link href="css/normalize.css" rel="stylesheet" /> -->
+  <script>
+    document.createElement( "picture" );
+  </script>
+  </head>
+
+  <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="page-header">
+      <button class="page-header__toggle"></button>
+      <div class="page-header__logo logo">
+        <a class="logo__link">
+          <svg
+            class="logo__image"
+            width="58"
+            height="22"
+            viewBox="0 0 58 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M27.7339 0L22.0582 17.0732H17.7457L13.9289 5.51219L9.98817 17.0732H5.70045L0 0H4.1638L8.07976 12L12.1692 0H15.8869L19.8524 12.0976L23.8923 0H27.7339Z"
+              fill="#141517"
+            />
+            <path
+              d="M34.0886 3.7561C36.154 3.7561 37.7402 4.2439 38.8473 5.21951C39.9543 6.17886 40.5078 7.63414 40.5078 9.58536V17.0732H36.8893V15.439C36.1623 16.6585 34.8074 17.2683 32.8246 17.2683C31.8002 17.2683 30.9079 17.0976 30.1479 16.7561C29.4043 16.4146 28.8343 15.9431 28.4378 15.3415C28.0412 14.7398 27.8429 14.0569 27.8429 13.2927C27.8429 12.0732 28.3056 11.1138 29.2309 10.4146C30.1727 9.71545 31.6184 9.36585 33.5681 9.36585H36.6414C36.6414 8.53658 36.3853 7.90244 35.8731 7.46342C35.3609 7.00813 34.5926 6.78049 33.5681 6.78049C32.8577 6.78049 32.1554 6.89431 31.4615 7.12195C30.784 7.33333 30.2057 7.62602 29.7265 8L28.3386 5.34146C29.0656 4.8374 29.9331 4.44715 30.941 4.17073C31.9654 3.89431 33.0146 3.7561 34.0886 3.7561ZM33.7912 14.7073C34.4521 14.7073 35.0387 14.561 35.5509 14.2683C36.0631 13.9593 36.4266 13.5122 36.6414 12.9268V11.5854H33.9895C32.4033 11.5854 31.6102 12.0976 31.6102 13.122C31.6102 13.6098 31.8002 14 32.1802 14.2927C32.5768 14.5691 33.1138 14.7073 33.7912 14.7073Z"
+              fill="#141517"
+            />
+            <path
+              d="M57 3.95122L50.9774 17.878C50.366 19.3902 49.6059 20.4553 48.6972 21.0732C47.8049 21.6911 46.7227 22 45.4504 22C44.7564 22 44.0707 21.8943 43.3933 21.6829C42.7158 21.4715 42.1623 21.1789 41.7327 20.8049L43.1454 18.0976C43.4429 18.3577 43.7816 18.561 44.1616 18.7073C44.5582 18.8537 44.9465 18.9268 45.3265 18.9268C45.8552 18.9268 46.2848 18.7967 46.6153 18.5366C46.9457 18.2927 47.2432 17.878 47.5075 17.2927L47.5571 17.1707L41.7823 3.95122H45.7726L49.5151 12.8537L53.2823 3.95122H57Z"
+              fill="#141517"
+            />
+            <path
+              d="M57.0173 3.9502L50.9946 17.877C50.3833 19.3892 49.6232 20.4543 48.7145 21.0721C47.8222 21.69 46.74 21.999 45.4677 21.999C44.7737 21.999 44.088 21.8933 43.4106 21.6819C42.7331 21.4705 42.1796 21.1778 41.75 20.8039L43.1627 18.0965C43.4601 18.3567 43.7989 18.5599 44.1789 18.7063C44.5754 18.8526 44.9637 18.9258 45.3438 18.9258C45.8725 18.9258 46.3021 18.7957 46.6326 18.5356C46.963 18.2917 47.2604 17.877 47.5248 17.2917L47.5744 17.1697L49.5323 12.8526L53.2996 3.9502H57.0173Z"
+              fill="#FE7865"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="page-header__nav main-nav">
+        <ul class="page-header__nav-list main-nav__list">
+          <li class="main-nav__item">
+            <a href="#places" class="main-nav__link">О путешествии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#supply" class="main-nav__link">Цены</a>
+          </li>
+        </ul>
+        <div class="main-nav__phone">
+          <a href="" class="main-nav__phone-link">+7 (499) -784-684-46</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="way">
+        <h1 class="way__title">Путешествие по Европе</h1>
+        <p class="way__description">
+          В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море,
+          горы, а также потрясающая красота природы.
+        </p>
+        <a href="#countries" class="way__link button">
+          <span class="way__link-name">смотреть тур</span>
+        </a>
+      </section>
+      <section class="visit-places">
+        <h2 class="visit-places__title" id="places">Места посещения</h2>
+        <p class="visit-places__description">
+          Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
+        </p>
+        <ul class="visit-places__list">
+          <li class="visit-places__item">
+            <div class="visit-places__item-ground"></div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/greece-desktop@1x.webp 1x, img/greece-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/greece-tablet@1x.webp 1x, img/greece-tablet@2x.webp 2x">
+              <source
+                media="(min-width: 1024px)"
+                srcset="
+                  img/greece-desktop@1x.png 1x,
+                  img/greece-desktop@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/greece-tablet@1x.png 1x,
+                  img/greece-tablet@2x.png 2x
+                "
+              />
+              <img
+                class="visit-places__image"
+                src="img/greece-mobile@1x.png"
+                srcset="img/greece-mobile@2x.png 2x"
+                width="350"
+                height="430"
+                alt="Греция"
+              />
+            </picture>
+            <p class="visit-places__name">Греция</p>
+            <a href="#countries" class="visit-places__link">
+              смотреть подробнее
+            </a>
+          </li>
+          <li class="visit-places__item">
+            <div class="visit-places__item-ground"></div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/albany-desktop@1x.webp 1x, img/albany-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/albany-tablet@1x.webp 1x, img/albany-tablet@2x.webp 2x">
+              <source
+                media="(min-width: 1024px)"
+                srcset="
+                  img/albany-desktop@1x.png 1x,
+                  img/albany-desktop@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/albany-tablet@1x.png 1x,
+                  img/albany-tablet@2x.png 2x
+                "
+              />
+              <img
+                class="visit-places__image"
+                src="img/albany-mobile@1x.png"
+                srcset="img/albany-mobile@2x.png 2x"
+                width="350"
+                height="430"
+                alt="Албания"
+              />
+            </picture>
+            <p class="visit-places__name">Албания</p>
+            <a href="#countries" class="visit-places__link">
+              смотреть подробнее
+            </a>
+          </li>
+          <li class="visit-places__item">
+            <div class="visit-places__item-ground"></div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/macedonia-desktop@1x.webp 1x, img/macedonia-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/macedonia-tablet@1x.webp 1x, img/macedonia-tablet@2x.webp 2x">
+              <source
+                media="(min-width: 1024px)"
+                srcset="
+                  img/macedonia-desktop@1x.png 1x,
+                  img/macedonia-desktop@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/macedonia-tablet@1x.png 1x,
+                  img/macedonia-tablet@2x.png 2x
+                "
+              />
+              <img
+                class="visit-places__image"
+                src="img/macedonia-mobile@1x.png"
+                srcset="img/macedonia-mobile@2x.png 2x"
+                width="350"
+                height="430"
+                alt="Македония"
+              />
+            </picture>
+            <p class="visit-places__name">Македония</p>
+            <a href="#countries" class="visit-places__link">
+              смотреть подробнее
+            </a>
+          </li>
+          <li class="visit-places__item">
+            <div class="visit-places__item-ground"></div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/montenegrin-desktop@1x.webp 1x, img/montenegrin-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/montenegrin-tablet@1x.webp 1x, img/montenegrin-tablet@2x.webp 2x">
+              <source
+                media="(min-width: 1024px)"
+                srcset="
+                  img/montenegrin-desktop@1x.png 1x,
+                  img/montenegrin-desktop@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/montenegrin-tablet@1x.png 1x,
+                  img/montenegrin-tablet@2x.png 2x
+                "
+              />
+              <img
+                class="visit-places__image"
+                src="img/montenegrin-mobile@1x.png"
+                srcset="img/montenegrin-mobile@2x.png 2x"
+                width="350"
+                height="430"
+                alt="Черногория"
+              />
+            </picture>
+            <p class="visit-places__name">Черногория</p>
+            <a href="#countries" class="visit-places__link">
+              смотреть подробнее
+            </a>
+          </li>
+          <li class="visit-places__item">
+            <div class="visit-places__item-ground"></div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/croatia-desktop@1x.webp 1x, img/croatia-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/croatia-tablet@1x.webp 1x, img/croatia-tablet@2x.webp 2x">
+              <source
+                media="(min-width: 1024px)"
+                srcset="
+                  img/croatia-desktop@1x.png 1x,
+                  img/croatia-desktop@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/croatia-tablet@1x.png 1x,
+                  img/croatia-tablet@2x.png 2x
+                "
+              />
+              <img
+                class="visit-places__image"
+                src="img/croatia-mobile@1x.png"
+                srcset="img/croatia-mobile@2x.png 2x"
+                width="350"
+                height="430"
+                alt="Хорватия"
+              />
+            </picture>
+            <p class="visit-places__name">Хорватия</p>
+            <a href="#countries" class="visit-places__link">
+              смотреть подробнее
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="countries" id="countries">
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="countries"
+          id="country-greece"
+          checked
+        />
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="countries"
+          id="country-albany"
+        />
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="countries"
+          id="country-macedonia"
+        />
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="countries"
+          id="country-montenegrin"
+        />
+        <input
+          class="visually-hidden"
+          type="radio"
+          name="countries"
+          id="country-croatia"
+        />
+
+        <div class="countries__tabs-wrapper">
+          <label class="countries__tab" for="country-greece">Греция</label>
+          <label class="countries__tab" for="country-albany">Албания</label>
+          <label class="countries__tab" for="country-macedonia">
+            Македония
+          </label>
+          <label class="countries__tab" for="country-montenegrin">
+            Черногория
+          </label>
+          <label class="countries__tab" for="country-croatia">Хорватия</label>
+        </div>
+
+        <div class="countries__item countries__item--greece">
+          <div class="countries__wrapper">
+            <h2 class="countries__title">Греция</h2>
+            <p class="countries__text">
+              На севере Греции находится один из крупнейших комплексов
+              монастырей, расположенных на вершинах скал. Название его «Метеора»
+              буквально переводится как «висящие в воздухе». Этот монастырь
+              основная цель нашего путешествия в Греции. После покарения скал из
+              песчанника и обломочной горной породы, достигающих в высоту 600
+              метров, наградой будет неописуемая красота природы и атмосфера,
+              царящая в монастырях Метеоры.
+            </p>
+            <button class="countries__btn-buy button button--buy">
+              купить тур сейчас
+            </button>
+          </div>
+          <div class="countries__reviews">
+            <h3 class="countries__reviews-title">
+              Отзывы
+            </h3>
+            <p class="countries__reviews-text">
+              Метеоры в Греции можно сравнить разве что с Монсерратт в Испании.
+              Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная
+              территория, высоко в горах. Ощущение такое, как будто стоишь на
+              краю света!
+            </p>
+            <div class="countries__author">
+              <img
+                class="countries__author-image"
+                src="img/golitsyna.png"
+                width="38"
+                height="38"
+                alt="Фото автора"
+              />
+              <span class="countries__author-name">Влада Голицина</span>
+            </div>
+          </div>
+        </div>
+        <div class="countries__item countries__item--albany">
+          <div class="countries__wrapper">
+            <h2 class="countries__title">Албания</h2>
+            <p class="countries__text">
+              В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас
+              чистейшей водой и удивительным пляжем. Вначале кажется, что на
+              пляже вас встречает обычный, правда невероятно белоснежный и
+              слишком крупный песок. Однако, присмотревшись, можно понять, что
+              это не песок, а камни, перетёртые до такого мелкого состояния.
+            </p>
+            <button class="countries__btn-buy button button--buy">
+              купить тур сейчас
+            </button>
+          </div>
+          <div class="countries__reviews">
+            <h3 class="countries__reviews-title">
+              Отзывы
+            </h3>
+            <p class="countries__reviews-text">
+              Замечательный курорт, обязательно стоит посетить. В следующий раз
+              возьму с собой сестру, чтобы тоже смогла вкусить все красоты
+              природы :)
+            </p>
+            <div class="countries__author">
+              <img
+                src="img/marishka.png"
+                width="38"
+                height="38"
+                alt="Фото автора"
+                class="countries__author-image"
+              />
+              <span class="countries__author-name">Маришка</span>
+            </div>
+          </div>
+        </div>
+        <div class="countries__item countries__item--macedonia">
+          <div class="countries__wrapper">
+            <h2 class="countries__title">Македония</h2>
+            <p class="countries__text">
+              В Македонии нашей целью будет посетить Палаошник, который
+              расположился в удивительно красивой лесистой местности возле
+              Охридского озера и Самуиловой твердыни. А также мы заберемся на
+              вершину горы Татичев Камен где находится археологический памятник
+              Кокино в длину около 100 метров.
+            </p>
+            <button class="countries__btn-buy button button--buy">
+              купить тур сейчас
+            </button>
+          </div>
+          <div class="countries__reviews">
+            <h3 class="countries__reviews-title">
+              Отзывы
+            </h3>
+            <p class="countries__reviews-text">
+              Я бы сказал необычное старое здание. В архитектуре я не
+              разбираюсь, но подъем в гору был очень веселым так как люди
+              оказались легкими и заводными. Красота природы впечатлила,
+              особенно после долгого пути в гору.
+            </p>
+            <div class="countries__author">
+              <img
+                src="img/kuzmin.png"
+                width="38"
+                height="38"
+                alt="Фото автора"
+                class="countries__author-image"
+              />
+              <span class="countries__author-name">Михаил Кузьмин</span>
+            </div>
+          </div>
+        </div>
+        <div class="countries__item countries__item--montenegrin">
+          <div class="countries__wrapper">
+            <h2 class="countries__title">Черногория</h2>
+            <p class="countries__text">
+              Черногория удивит нас самым большим в Европе каньоном реки Тара,
+              который в некоторых местах высотой берегов доходит до 1300 метров,
+              а шириной не превышает трех. При этом длина каньона составляет 80
+              км.
+            </p>
+            <button class="countries__btn-buy button button--buy">
+              купить тур сейчас
+            </button>
+          </div>
+          <div class="countries__reviews">
+            <h3 class="countries__reviews-title">
+              Отзывы
+            </h3>
+            <p class="countries__reviews-text">
+              Неописуемой красоты каньон! Ничего прекраснее в жизни не видела,
+              разве что в фильмах :) Всем советую
+            </p>
+            <div class="countries__author">
+              <img
+                src="img/may.png"
+                width="38"
+                height="38"
+                alt="Фото автора"
+                class="countries__author-image"
+              />
+              <span class="countries__author-name">Анастасия Мей</span>
+            </div>
+          </div>
+        </div>
+        <div class="countries__item countries__item--croatia">
+          <div class="countries__wrapper">
+            <h2 class="countries__title">Хорватия</h2>
+            <p class="countries__text">
+              В Хорватии мы посетим необычайную пещеру названную Бередине. Ее
+              подземный мир увлечет вас на 80-ти метровую глубину через 5
+              освещенных залов, украшенных удивительными нерукотворными
+              скульптурами — сталактитами и сталагмитами — формировавшимися
+              тысячи и тысячи лет.
+            </p>
+            <button class="countries__btn-buy button button--buy">
+              купить тур сейчас
+            </button>
+          </div>
+          <div class="countries__reviews">
+            <h3 class="countries__reviews-title">
+              Отзывы
+            </h3>
+            <p class="countries__reviews-text">
+              Мы поехали всей семьей, я, моя жена и родители. Пещера просто
+              незабываема! А то, что все это формировалось тысячелетиями, мега
+              необычно. Первоначально даже не верилось, но натур ни с чем не
+              спутать по итогу :)
+            </p>
+            <div class="countries__author">
+              <img
+                src="img/may.png"
+                width="38"
+                height="38"
+                alt="Фото автора"
+                class="countries__author-image"
+              />
+              <span class="countries__author-name">Владимир Мулицин</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="supply" id="supply">
+        <div class="supply__profile">
+          <h2 class="supply__title">Цены</h2>
+          <p class="supply__description">
+            Специально для Вас мы разработали 2 пакета цен с разными условиями,
+            отталкиваясь от Ваших потребностей и возможностей. Выберите для себя
+            лучший вариант отпуска и отдохните на все 100%!
+          </p>
+          <p class="supply__connection">Свяжитесь с нами</p>
+          <a href="tel:+749978468446" class="supply__phone">
+            +7&nbsp;(499)&nbsp;-784-684-46
+          </a>
+        </div>
+        <ul class="supply__list">
+          <li class="supply__item">
+            <div class="supply__wrapper-title">
+              <h3 class="supply__item-title">Комплексный</h3>
+              <span class="supply__item-price">$1999</span>
+            </div>
+            <p class="supply__item-memo">
+              Ознакомьтесь с перечнем того, что входит в данный пакет
+            </p>
+            <ul class="supply__content-list">
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Разработанный маршрут с гидом группы
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Перелет, трансфер и проживание в отелях
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Завтраки, ужины в отелях и ланчи на природе
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Экскурсии по удивительно красивым местам Европы
+              </li>
+            </ul>
+            <button class="supply__btn button button--buy">
+              купить тур сейчас
+            </button>
+          </li>
+          <li class="supply__item">
+            <div class="supply__wrapper-title">
+              <h3 class="supply__item-title">Экономный</h3>
+              <span class="supply__item-price">$1399</span>
+            </div>
+            <p class="supply__item-memo">
+              Ознакомьтесь с перечнем того, что входит в данный пакет
+            </p>
+            <ul class="supply__content-list">
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Разработанный маршрут с гидом группы
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Перелет и трансфер
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Проживание в хостелах при отелях
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Только завтраки в отелях
+              </li>
+              <li class="supply__content-item">
+                <svg class="supply__content-check" width="14" height="12">
+                  <use xlink:href="#sprite-check"></use>
+                </svg>
+                Экскурсии по удивительно красивым местам Европы
+              </li>
+            </ul>
+            <button class="supply__btn button button--buy">
+              купить тур сейчас
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="communication">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form
+          action="https://echo.htmlacademy.ru"
+          method="POST"
+          class="communication__form form-user"
+        >
+          <p class="communication__question">У Вас остались вопросы?</p>
+          <p class="communication__proposal">
+            Оставьте свой номер или e-mail и мы свяжемся с Вами
+          </p>
+          <div class="form-user__fields">
+            <label class="form-user__label form-user__label--phone">
+              <input
+                class="form-user__input form-user__input--phone"
+                type="text"
+                name="phone"
+                placeholder="Введите 10 цифр номера"
+                title="Введите 10 цифр номера (обязательное поле)"
+                pattern="[0-9]{10}"
+              />
+              <span
+                class="communication__error-message form-user__error-message"
+              >
+                Данные не верны
+              </span>
+            </label>
+            <label class="form-user__label form-user__label--email">
+              <input
+                class="form-user__input form-user__input--modal form-user__input--email"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                title="Введите Ваш e-mail"
+              />
+              <span
+                class="communication__error-message form-user__error-message"
+              >
+                Данные не верны
+              </span>
+            </label>
+          </div>
+          <button class="form-user__btn-submit button" type="submit">
+            отправить
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="next-ways">
+        <h2 class="next-ways__title">Следующие путешествия</h2>
+        <ul class="next-ways__list">
+          <li class="next-ways__item">
+            <a href="#" class="next-ways__link">Марсель</a>
+            <a href="#" class="next-ways__link">Ним</a>
+            <a href="#" class="next-ways__link">Монпелье</a>
+            <a href="#" class="next-ways__link">Барселона</a>
+            <a href="#" class="next-ways__link">Пальма</a>
+          </li>
+          <li class="next-ways__item">
+            <a href="#" class="next-ways__link">Сардиния</a>
+            <a href="#" class="next-ways__link">Палермо</a>
+            <a href="#" class="next-ways__link">Катания</a>
+            <a href="#" class="next-ways__link">Неаполь</a>
+            <a href="#" class="next-ways__link">Рим</a>
+          </li>
+          <li class="next-ways__item">
+            <a href="#" class="next-ways__link">Корс</a>
+            <a href="#" class="next-ways__link">Ницца</a>
+            <a href="#" class="next-ways__link">Монако</a>
+            <a href="#" class="next-ways__link">Динь-ле-Бен</a>
+            <a href="#" class="next-ways__link">Гренобль</a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <h2 class="contacts__title">Наши контакты</h2>
+        <p class="contacts__item">
+          <a
+            href="mailto:puteshestviemechta@gmail.ru"
+            class="contacts__link contacts__link--email"
+          >
+            <span class="contacts__link-email">
+              puteshestviemechta@gmail.ru
+            </span>
+            <span class="contacts__link-name">Почта</span>
+          </a>
+        </p>
+        <p class="contacts__item">
+          <a
+            href="tel:+749978468446"
+            class="contacts__link contacts__link--phone"
+          >
+            +7&nbsp;(499)&nbsp;-784-684-46
+          </a>
+        </p>
+      </div>
+      <div class="corporate-travel">
+        <h2 class="corporate-travel__title">Корпоративные путешествия</h2>
+        <p class="corporate-travel__note">
+          Также вы можете заказать индивидуальное путешествие под вашу компанию.
+          Подобные туры очень сближают компанию, помогают поддерживать
+          корпоративный дух, а также являются оличным времяпрепровождением
+        </p>
+      </div>
+    </footer>
+
+    <div class="modal-overlay"></div>
+    <section class="modal-user">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form
+        class="modal-user__form form-user form-user--modal"
+        action="https://echo.htmlacademy.ru"
+        method="POST"
+      >
+        <p class="modal-user__title">Купить тур</p>
+        <button
+          class="modal-user__btn-close"
+          type="button"
+          aria-label="Закрыть форму"
+        ></button>
+        <div class="form-user__fields form-user__fields--modal">
+          <label
+            class="form-user__label form-user__label--modal form-user__label--phone"
+          >
+            <input
+              class="form-user__input form-user__input--modal form-user__input--phone"
+              type="text"
+              name="phone"
+              placeholder="Введите 10 цифр номера"
+              title="Введите 10 цифр номера (обязательное поле)"
+              pattern="[0-9]{10}"
+            />
+            <span class="modal-user__error form-user__error-message">
+              Данные не верны
+            </span>
+          </label>
+          <label
+            class="form-user__label form-user__label--modal form-user__label--email"
+          >
+            <input
+              class="form-user__input form-user__input--modal form-user__input--email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              title="Введите Ваш e-mail"
+            />
+            <span class="modal-user__error form-user__error-message">
+              Данные не верны
+            </span>
+          </label>
+        </div>
+        <button class="form-user__btn-submit button" type="submit">
+          отправить
+        </button>
+      </form>
+    </section>
+
+    <section class="modal-message">
+      <h2 class="visually-hidden">Сообщение об успешной отправке</h2>
+      <p class="modal-message__title">Форма успешно отправлена, спасибо!:)</p>
+      <button
+        class="modal-message__btn-close"
+        type="button"
+        aria-label="Закрыть форму"
+      ></button>
+    </section>
+    <script src="js/script.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+  </body>
+</html>

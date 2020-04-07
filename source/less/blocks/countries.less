@@ -1,0 +1,386 @@
+.countries {
+  z-index: 1;
+  position: relative;
+  margin-bottom: 240px;
+  padding: 0 19.53%;
+
+  &::before {
+    z-index: -1;
+    .pseudo();
+    width: 75%;
+    height: 1088px;
+    left: 12.5%;
+    top: 12%;
+    background-image: url('../img/map.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.countries__tabs-wrapper {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 80px;
+  white-space: nowrap;
+  overflow: auto;
+  align-items: center;
+}
+
+.countries__tab {
+  padding-left: 5.156%;
+  padding-bottom: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.415px;
+  color: rgba(44, 46, 63, 0.3);
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#country-greece:checked
+  ~ .countries__tabs-wrapper
+  > .countries__tab[for='country-greece'],
+#country-albany:checked
+  ~ .countries__tabs-wrapper
+  > .countries__tab[for='country-albany'],
+#country-macedonia:checked
+  ~ .countries__tabs-wrapper
+  > .countries__tab[for='country-macedonia'],
+#country-montenegrin:checked
+  ~ .countries__tabs-wrapper
+  > .countries__tab[for='country-montenegrin'],
+#country-croatia:checked
+  ~ .countries__tabs-wrapper
+  > .countries__tab[for='country-croatia'] {
+  color: @button;
+}
+
+.countries__item {
+  position: relative;
+  display: none;
+  min-height: 596px;
+  justify-content: space-between;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 63.5% 0;
+  background-size: 430px 596px;
+  white-space: normal;
+
+  &--greece {
+    background-image: url('../img/greece-card@1x.png');
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('../img/greece-card@2x.png');
+    }
+  }
+
+  &--albany {
+    background-image: url('../img/albany-card@1x.png');
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('../img/albany-card@2x.png');
+    }
+  }
+
+  &--macedonia {
+    background-image: url('../img/macedonia-card@1x.png');
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('../img/macedonia-card@2x.png');
+    }
+  }
+
+  &--montenegrin {
+    background-image: url('../img/montenegrin-card@1x.png');
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('../img/montenegrin-card@2x.png');
+    }
+  }
+
+  &--croatia {
+    background-image: url('../img/croatia-card@1x.png');
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('../img/croatia-card@2x.png');
+    }
+  }
+}
+
+#country-greece:checked ~ .countries__item--greece,
+#country-albany:checked ~ .countries__item--albany,
+#country-macedonia:checked ~ .countries__item--macedonia,
+#country-montenegrin:checked ~ .countries__item--montenegrin,
+#country-croatia:checked ~ .countries__item--croatia {
+  display: flex;
+}
+
+.countries__wrapper {
+  max-width: 32%;
+}
+
+.countries__title {
+  .clear();
+  margin-bottom: 34px;
+  padding-bottom: 14px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.245px;
+  color: @text;
+  background-image: url('../img/countries-divider.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.countries__text {
+  .clear();
+  margin-bottom: 48px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.466667px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.countries__btn-buy {
+  padding: 30px 40px;
+}
+
+.countries__reviews {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 382px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.countries__author {
+  display: flex;
+  align-items: center;
+}
+
+.countries__author-image {
+  margin-right: 16px;
+}
+
+.countries__reviews-title {
+  .clear();
+  margin-bottom: 21px;
+  padding-bottom: 11px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.691667px;
+  color: @text;
+  background-image: url('../img/reviews-divider.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.countries__reviews-text {
+  .clear();
+  margin-bottom: 35px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.408333px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.countries__author-image {
+  display: block;
+  .size(38);
+  border-radius: 50%;
+}
+
+.countries__author-name {
+  font-family: 'Poppins', 'arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.466667px;
+  color: @text;
+}
+
+@media (max-width: @tablet-width) {
+  .countries {
+    .clear();
+    margin-bottom: 80px;
+
+    &::before {
+      background-image: none;
+    }
+  }
+
+  .countries__tabs-wrapper {
+    margin-bottom: 33px;
+    padding-left: 37px;
+  }
+
+  .countries__tab {
+    padding-left: 99px;
+  }
+
+  .countries__item {
+    display: none;
+    .clear();
+    padding-bottom: 477px;
+    flex-direction: column;
+    align-items: center;
+    background-position: center bottom 32px;
+    background-size: 100% 415px;
+  }
+
+  .countries__wrapper {
+    max-width: 100%;
+  }
+
+  .countries__title {
+    .clear();
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    background-image: none;
+  }
+
+  .countries__text {
+    width: 100%;
+    .clear();
+    margin-bottom: 20px;
+    padding: 0 2.73%;
+    text-align: center;
+  }
+
+  .countries__btn-buy {
+    display: block;
+    margin: 0 auto;
+    padding: 19px 53px;
+  }
+
+  .countries__reviews {
+    right: auto;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 382px;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .countries {
+    .clear();
+    margin-bottom: 45px;
+  }
+
+  .countries__tabs-wrapper {
+    margin-bottom: 24px;
+    padding-left: 16px;
+  }
+
+  .countries__tab {
+    padding-left: 100px;
+  }
+
+  .countries__item {
+    display: none;
+    .clear();
+    padding-bottom: 531px;
+    background-position: center bottom 66px;
+  }
+
+  .countries__wrapper {
+    max-width: 100%;
+  }
+
+  .countries__title {
+    .clear();
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .countries__text {
+    width: 100%;
+    .clear();
+    margin-bottom: 20px;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .countries__btn-buy {
+    width: 288px;
+    padding: 19px 53px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .countries__reviews {
+    bottom: 0;
+    left: 50%;
+    padding: 30px 20px;
+    transform: translatex(-50%);
+    width: 268px;
+  }
+
+  .countries__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countries__author-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .countries__reviews-title {
+    .clear();
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.408333px;
+    background-position: center bottom;
+  }
+
+  .countries__reviews-text {
+    .clear();
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .countries__author-image {
+    display: block;
+    .size(38);
+    border-radius: 50%;
+  }
+
+  .countries__author-name {
+    font-family: 'Poppins', 'arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.466667px;
+    color: @text;
+  }
+}
