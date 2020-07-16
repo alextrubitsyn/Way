@@ -4,11 +4,6 @@
   var pageHeader = document.querySelector(".page-header");
   var toggleButton = pageHeader.querySelector(".page-header__toggle");
   var buttonBuy = document.querySelectorAll('.button--buy');
-
-  var countriesButton = document.querySelector('.countries__buttons');
-  var countriesButtons = document.querySelectorAll('.countries__button');
-  var countriesItems = document.querySelectorAll('.countries__item');
-
   var buttonClose = document.querySelector('.modal-user__btn-close');
   var buttonCloseMessage = document.querySelector('.modal-message__btn-close');
   var overlay = document.querySelector('.modal-overlay');
@@ -141,33 +136,6 @@
     pageMain.addEventListener('click', onButtonOpenModalClick);
   }
 
-  var onButtonCountriesClick = function (evtBtnCountries) {
-    var btnClass = evtBtnCountries.target.classList;
-    if (!btnClass.contains('countries__button--active')) {
-      for (var i = 0; i < countriesButtons.length; i++) {
-        if (countriesButtons[i].classList.contains('countries__button--active')) {
-          countriesButtons[i].classList.remove('countries__button--active');
-        }
-      }
-      for (var j = 0; j < btnClass.length; j++) {
-        var modify = btnClass[j].indexOf('--');
-        if (modify > 0) {
-          var countryModify = btnClass[j].slice(modify);
-        }
-      }
-      btnClass.add('countries__button--active');
-      for (var z = 0; z < countriesItems.length; z++) {
-        if (countriesItems[z].classList.contains('countries__item--active')) {
-          countriesItems[z].classList.remove('countries__item--active');
-        }
-        if (countriesItems[z].classList.contains('countries__item' + countryModify)) {
-          countriesItems[z].classList.add('countries__item--active');
-        }
-      }
-    }
-  }
+  window.vendor.tabs('countries__buttons', 'countries__button', 'countries__item');
 
-  if (countriesButton) {
-    countriesButton.addEventListener('click', onButtonCountriesClick);
-  }
 })();
