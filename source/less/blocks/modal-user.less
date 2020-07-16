@@ -10,7 +10,11 @@
   text-align: right;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
-  background: url("../img/modal-background.png") no-repeat;
+  background: url("../img/modal.jpg") no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/modal@2x.jpg") no-repeat;
+  }
 
   &--open {
     display: block;

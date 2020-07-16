@@ -6,11 +6,14 @@
   margin: 0 auto 170px;
   padding: 0 18.9% 0 20.156%;
   color: @text-dark;
-  background-image: url("../img/communication-background.png");
+  background-image: url("../img/communication.jpg");
   background-repeat: no-repeat;
   background-size: 844px 455px;
   background-position: 36.156% 0;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/communication@2x.jpg") no-repeat;
+  }
 }
 
 .communication__question {

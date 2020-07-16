@@ -4,10 +4,14 @@
   padding-bottom: 297px;
   padding-left: 56%;
   color: #ffffff;
-  background-image: url('../img/main-background.png');
+  background-image: url('../img/main-bg_desktop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/main-bg_desktop@2x.jpg") no-repeat;
+  }
 }
 
 .way__title {
@@ -103,11 +107,15 @@
     font-size: 24px;
     line-height: 36px;
     mix-blend-mode: normal;
-    background-image: url('../img/main-background-mobile.png');
+    background-image: url('../img/main-background_mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-  }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/main-background_mobile@2x.jpg") no-repeat;
+    }
+    }
 
   .way__description {
     width: 100%;
